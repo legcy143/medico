@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>medico</title>
+</head>
+
+<body id="body">
+    <nav class="nav">
+        <div class="logo">
+            <img style="cursor: pointer;" height="30px" class="menu_icon" src="compo/menu_light.svg" alt="menu"
+                onclick="handlenav()">
+            <img height="30px" src="compo/logo_img.png" alt="logo">
+            <h2>medico</h2>
+        </div>
+        <div class="nav_links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#aboutus">About us</a>
+            <a href="#review">costumer review</a>
+            <a href="#">contact us</a>
+            <a href="#appointment">appointment</a>
+        </div>
+        <div class="nav_notify_acc">
+            <div class="nav_notify"><img height="20px" src="compo/notification_light.png" alt=""> <span>22</span></div>
+            <a href="#"> login</a>
+        </div>
+    </nav>
+    <main class="container_body" id="home">
+        <section class="left_container_home">
+            <p class="home_p">🎉 +8k happy costumer</p>
+            <h2 class="home_h2">search for doctor and make appointment from all over india</h2>
+            <small class="home_small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique commodi beatae
+                veritatis nemo provident, illum corporis? Impedit, similique delectus animi esse voluptatem quisquam
+                eveniet accusantium odio, porro fuga et doloribus!</small>
+
+            <div class="left_home_buttons">
+                <button>get appointment</button>
+                <button>our doctors</button>
+            </div>
+
+            <div class="costumer_review_home flex_box">
+                <img src="compo/pic1.png" alt="user">
+                <img src="compo/bg.png" alt="user">
+                <img src="compo/pic1.png" alt="user">
+                <img src="compo/bg.png" alt="user">
+                <a href="#review">+6k costumer review</a>
+            </div>
+        </section>
+        <section class="right_home_container">
+            <div class="right_home_text">
+                <h1>200+</h1>
+                <p>speciailist doctor</p>
+            </div>
+            <div class="right_home_text">
+                <h1>15+</h1>
+                <p>year of experience</p>
+            </div>
+            <div class="right_home_text">
+                <h1>10k+</h1>
+                <p>monthly client</p>
+            </div>
+            <img src="compo/doctor.svg" alt="img">
+        </section>
+    </main>
+
+    <!-- ----form appointement  -->
+    <main class="main_form" id="appointment">
+        <h3>get an appointment for your family by filling out the from detail below</h3>
+        <form class="schedule_form" id="scheduleForm">
+            <div><input type="date" id="dateSchedule" required></div>
+            <div><input type="time" id="timeSchedule" required></div>
+            <div><input type="text" id="doctorSchedule" required></div>
+            <button>search</button>
+        </form>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <main class="modal" id="modal">
+        <section class="modal_content" id="modal_content_box">
+            <nav>
+                <div onclick="closeModal()">close</div>
+            </nav>
+            <div id="modal_id"></div>
+        </section>
+    </main>
+    <!-- -----form -->
+
+    <script src="script.js"></script>
+    <script src="modal.js"></script>
+</body>
+
+</html>

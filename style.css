@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --main_blue: rgb(27, 124, 235);
+    --main_blue_light: rgb(75, 153, 243);
+    --main_blue_dark: rgb(4, 100, 211);
+    --black: rgb(44, 44, 44);
+    --white: rgb(245, 245, 245);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+    font-family: "Poppins";
+    user-select: none;
+
+}
+body{
+    display: flex;
+    flex-direction:  column;
+    font-family: "popins" , sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+    min-height: 100vh;
+}
+body::-webkit-scrollbar{
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: var(--main_blue_dark);
+    border-radius: 150px;
+}
+body::-webkit-scrollbar-track{
+    background-color: rgba(162, 217, 243, 0.671);
+}
+a{
+    color: var(--white);
+    text-decoration: none;
+}
+.flex_box ,.left_home_buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.flex_box_center , .nav , .logo ,.nav_links ,.nav_notify_acc , .nav_notify span, .schedule_form ,.nav_notify_acc a , .modal_content nav div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.nav{
+    padding: 20px 40px;
+    justify-content: space-between;
+    position: relative;
+    position: sticky;
+    top: 0%;
+    z-index: 10;
+    background-color: var(--black);
+}
+.logo{
+    gap: 10px;
+}
+.nav_links{
+    gap: 20px;
+}
+.nav_links a{
+    text-transform: capitalize;
+    text-decoration: none;
+    color: var(--white);
+    transition: 0.20s ease;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+}
+.nav_links a:hover{
+    transition: 0.20s ease;
+    text-shadow: 0px 0px 5px rgba(221, 221, 221, 0.205);
+    color: var(--main_blue_light);
+    border-bottom: 2px solid var(--main_blue);
+}
+.active_nav{
+    color: var(--main_blue) ;
+    border-bottom: 2px solid var(--main_blue_dark);
+}
+.nav_notify_acc{
+    gap: 20px;
+}
+.nav_notify{
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.568);
+    width: 30px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    position: relative;
+    display: grid;
+    transition: 0.20s ease;
+}
+.nav_notify:hover , .nav_notify_acc a:hover{
+    transition: 0.20s ease;
+    background-color: rgba(255, 255, 255, 0.788);
+    color: var(--main_blue_dark);
+}
+.nav_notify span{
+    padding: 5px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    border-radius: 50%;
+    color: var(--white);
+    font-size: 0.6rem;
+    width: 25px;
+    aspect-ratio: 1/1;
+}
+.nav_notify_acc a{
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    color: var(--white);
+    background-color: rgb(71, 71, 71);
+    transition: 0.20s ease;
+    font-weight: 500;
+}
+
+.container_body{
+    margin: 5px auto 60px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+    min-height: 60vh;
+}
+.right_home_container{
+    position: relative;
+    padding: 10px;
+}
+.right_home_text{
+    position: absolute;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.342);
+    backdrop-filter: blur(10px);
+    width: fit-content;
+    border-radius: 8px;
+}
+.right_home_container div:nth-child(1){top:10%; right:0%}
+.right_home_container div:nth-child(2){top:50%; left:0%}
+.right_home_container div:nth-child(3){bottom:10%; right:10%}
+.right_home_container img{
+    width: 100%;
+}
+
+.left_container_home{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-transform: capitalize;
+}
+.home_p , .home_h2 , .home_small{
+    padding: 1px;
+}
+.home_p{
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.466);
+    width: fit-content;
+}
+.home_h2{
+    max-width: 1000px;
+    word-spacing: 5px;
+    font-size: clamp(1rem , calc(1rem + 3vw) , 3.5rem);
+}
+.home_small{
+    max-width: 500px;
+}
+.left_home_buttons{
+    gap: 10px;
+}
+.left_home_buttons button{
+    text-transform: capitalize;
+    padding: 10px 5px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid var(--main_blue);
+    background: transparent;
+    color: var(--white);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.164) inset,
+    1px 1px 6px rgba(0, 0, 0, 0.219) inset;
+    cursor: pointer;
+}
+.left_home_buttons button:first-child{
+    background-color: var(--main_blue);
+    color: var(--white);
+}
+.costumer_review_home{
+    margin-top: 10px;
+    position: relative;
+    padding-left: 100px;
+}
+.costumer_review_home img{
+    width: 35px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    position: absolute;
+    border: 2px solid white;
+}
+.costumer_review_home img:nth-child(1){left: 10px;}
+.costumer_review_home img:nth-child(2){left: 25px;}
+.costumer_review_home img:nth-child(3){left: 40px;}
+.costumer_review_home img:nth-child(4){left: 55px;}
+
+.main_form{
+    margin: 0px auto;
+    margin-top: auto;
+    width: 90%;
+    max-width: 1500px;
+    padding: 20px;
+    background-color: var(--main_blue);
+    color: var(--black);
+    border-radius: 12px;
+}
+.main_form h3{
+    margin: 20px 2px;
+    text-align: center;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+.schedule_form{
+    gap: 10px;
+}
+.schedule_form div{
+    width: 100%;
+    max-width: 300px;
+}
+.schedule_form input{
+    border: 2px solid transparent;
+    outline: none;
+    padding: 10px;
+    border: 2px solid var(--main_blue);
+    border-radius: 8px;
+    width: 100%;
+}
+.schedule_form input:focus{
+    box-shadow: 0px 0px 5px white;
+    border: 2px solid var(--main_blue_light);
+}
+.schedule_form button{
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    background-color: var(--white);
+    color: var(--black);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.164) inset,
+                1px 1px 6px rgba(0, 0, 0, 0.219) inset;
+}
+
+.menu_icon{
+    display: none;
+}
+
+@media (max-width:1150px) {
+    .nav{
+        padding: 10px 15px;
+    }
+    .left_container_home{
+        padding: 10px;
+    }
+    .home_h2{
+        max-width: 1000px;
+        font-size: clamp(1rem , calc(1rem + 3vw) , 2rem);
+    }
+    .right_home_text{
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+    .right_home_text h1{
+        font-size: 1rem;
+    }
+}
+@media (max-width:830px) {
+    .menu_icon{
+        display: block;
+    }
+    .nav{
+        padding: 10px;
+    }
+    .nav_links{
+        padding:20px 40px;
+        border-radius: 4px;
+        left: 0px;
+        top: 50px;
+        position: absolute;
+        background-color: rgba(6, 71, 109, 0.521);
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        transition: 0.20s ease;
+        transform-origin: 0px 0px;
+        transform: scale(0);
+
+    }
+    .schedule_form{
+        flex-direction: column;
+    }
+    .container_body{
+        flex-direction: column;
+        gap: 50px;
+    }.right_home_container{
+        width: 90%;
+        margin: auto;
+    }
+    .home_h2{
+        font-size: clamp(1rem , calc(1rem + 3vw) , 3rem);
+    }
+    .right_home_text{
+        padding: 5px 10px;
+        font-size: clamp(0.5rem , calc(0.5rem + 1vw) , 1rem);
+        /* font-size: 0.5rem; */
+    }
+    .right_home_text h1{
+        font-size: clamp(0.9rem , calc(0.9rem + 1vw) , 1rem);
+    }
+}
+
+
+
+.modal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(247, 247, 247, 0.425);
+    backdrop-filter: blur(5px);
+    display: grid;
+    place-items: center;
+    transition: 0.10s ease;
+    transform: scale(0);
+}
+.modal_content{
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--white);
+    color: var(--main_blue);
+    width: 90%;
+    max-width: 500px;
+}
+.modal_content nav{
+    margin: 0px 0px 10px 0px;
+    border-bottom: 1px solid rgba(2, 2, 2, 0.26);
+    display: flex;
+    justify-content: flex-end;
+}
+.modal_content nav div{
+    cursor: pointer;
+    width: fit-content;
+    font-weight: 600;
+}
+.open_transform{
+    transition: 0.20s ease;
+    transform: scale(1);
+}
